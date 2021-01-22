@@ -43,7 +43,7 @@ request.setAttribute("list",list);
       	<td>${u.getAuthor()}</td>  
 		<td>${u.getStatus()}</td> 
 		 <td class="d-print-none">
-				<a class="btn btn-sm btn-warning" href="editBook.jsp?id=${u.getId()}">Edit</a>
+				<a class="btn btn-sm btn-warning" href="edit.jsp?id=${u.getId()}">Edit</a>
 				<a class= "btn btn-sm btn-danger" href="deleteBook.jsp?id=${u.getId()}">Delete</a>
 		</td>  
 		</tr>

@@ -34,6 +34,7 @@ public class BookDAO {
 	        Connection con=getConnection();  
 	        PreparedStatement ps=con.prepareStatement(  
 	"update bookList set name=?,author=?,status=? where id=?");  
+	        System.out.println(u.getId());
 	        ps.setString(1,u.getName());  
 	        ps.setString(2,u.getAuthor());  
 	        ps.setString(3,u.getStatus());  

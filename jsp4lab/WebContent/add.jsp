@@ -11,7 +11,7 @@
   </head>
 <body>
 <h1>새로운 책 추가하기</h1>
-<form action="addbook.jsp" method="post" enctype="multipart/form-data">
+<form action="addbook.jsp" method="post" accept-charset="utf-8">
   <div class="form-horizontal">
 
     <div class="form-group row">

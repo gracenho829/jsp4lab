@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Edit Book</title>
 </head>
 <body>
 	<%@page import="com.book.BookDAO,com.book.Book"%>  
@@ -13,23 +13,24 @@
 	String id=request.getParameter("id");  
 	Book u=BookDAO.getRecordById(Integer.parseInt(id));  
 	%>  
-	  
+ 
 
 <h1>기록 편집하기</h1>
 	
-	<form action="editBook.jsp" method="post">
+	<form action="editBook.jsp" method="post" accept-charset="utf-8">
 	    <div class="form_horizontal">
 	      <div class="form-group row">
-			    <label class="col-form-label col-sm-2" for="name">Title</label>
+	      	<input type="hidden" name = "id" value = "<%= u.getId()%>">
+			    <label class="col-form-label col-sm-2" for="name">Name</label>
 			    <div class="col-sm-8">
-			      <input autofocus="" class="form-control" name="name" type="hidden" value="<%= u.getName()%>">
+			      <input class="form-control" name="name" type="text" value="<%= u.getName()%>">
 			    </div>
 			</div>
 			
 		   <div class="form-group row">
 			    <label class="col-form-label col-sm-2" for="author">Author</label>
 			    <div class="col-sm-7">
-			      <input class="form-control" name="author" value="<%= u.getAuthor()%>">
+			      <input class="form-control"  type="text" name="author" value="<%= u.getAuthor()%>">
 			    </div>
 			</div>
 			
@@ -37,9 +38,9 @@
 			    <label class="col-form-label col-sm-2" for="status">Status</label>
 			    <div class="col-sm-10">
 			    	 <input type="radio" name="status" value="Plan to Read"/>Plan to Read 
-					<input type="radio" name="status" value="Reading"/>Reading
-					<input type="radio" name="status" value="Finished"/>Finished
-					<input type="radio" name="status" value="Dropped"/>Dropped
+					 <input type="radio" name="status" value="Reading"/>Reading
+					 <input type="radio" name="status" value="Finished"/>Finished
+					 <input type="radio" name="status" value="Dropped"/>Dropped
 					
 			    </div>
 			</div>
